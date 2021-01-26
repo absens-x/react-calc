@@ -1,0 +1,14 @@
+@import './sass/boot/utils/index';
+
+.App {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    background-color: #010101;
+    border: 3px solid #414141;
+    border-radius: 10px;
+    padding: $gutter * 2;
+    padding-bottom: $gutter;
+}
