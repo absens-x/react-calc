@@ -1,14 +1,7 @@
 import React from 'react';
 import classes from './Button.module.scss';
 import clsx from 'clsx';
-
-export interface IButton {
-    name: string;
-    title: string;
-    wide?: boolean;
-    primary?: boolean;
-    clickHandler?: (buttonName: string) => void;
-}
+import { IButton } from '../../../types';
 
 const Button: React.FC<IButton> = ({
     name,

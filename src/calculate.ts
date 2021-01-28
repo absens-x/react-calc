@@ -1,5 +1,5 @@
 import Big, { BigSource } from 'big.js';
-import { ICalcState } from './App';
+import { ICalcState } from './types';
 
 /**
  * Operate and return result

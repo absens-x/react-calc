@@ -2,19 +2,12 @@ import * as React from 'react';
 
 import Display from './components/Display/Display';
 import ButtonGroup from './components/UI/ButtonGroup/ButtonGroup';
-import Button, { IButton } from './components/UI/Button/Button';
+import Button from './components/UI/Button/Button';
 import calculate from './calculate';
+import { ICalcState, IButton } from './types';
 
 import './App.scss';
 import './sass/main.scss';
-
-type StateValueType = string | null;
-
-export interface ICalcState {
-    total?: StateValueType;
-    next?: StateValueType;
-    operation?: StateValueType;
-}
 
 const App: React.FC = () => {
     const [calcState, setCalcState] = React.useState<ICalcState>({
@@ -130,7 +123,7 @@ const App: React.FC = () => {
             };
         });
     }
-    console.log(calcState);
+
     return (
         <div className="App container">
             <div className="wrapper">
