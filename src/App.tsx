@@ -123,7 +123,7 @@ const App: React.FC = () => {
             };
         });
     }
-
+    console.log(calcState);
     return (
         <div className="App container">
             <div className="wrapper">

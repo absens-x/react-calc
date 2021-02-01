@@ -31,7 +31,7 @@ const Display: React.FC<IDisplayProps> = ({ output }) => {
     function renderDigits(output: string): Array<ReactNode> {
         let digits: Array<ReactNode> = [];
 
-        if (!/[^0-9.-]+/.test(output)) {
+        if (!/[^0-9e.d\-d\+]+/.test(output)) {
             digits = output
                 .toString()
                 .split('')
