@@ -6,6 +6,7 @@ import { ICalcState } from './types';
  */
 
 Big.DP = 4;
+
 function operate(numOne: BigSource, numTwo: BigSource, operation: string) {
     const one: BigSource = Big(numOne || '0');
     const two: BigSource = Big(numTwo || (operation === '+' || operation === 'x' ? '1' : '0'));
@@ -55,9 +56,9 @@ export default function calculate(state: ICalcState, buttonName: string): ICalcS
     }
 
     if (buttonName === 'CE') {
-        if (state.next) {
+        if (state.next && state.total) {
             return {
-                next: '0',
+                next: null,
             };
         }
         return {};
