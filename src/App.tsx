@@ -33,7 +33,7 @@ const App: React.FC = () => {
         },
         {
             name: 'del',
-            title: 'x',
+            title: '<-',
         },
         {
             name: '7',

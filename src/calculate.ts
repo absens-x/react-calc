@@ -64,6 +64,15 @@ export default function calculate(state: ICalcState, buttonName: string): ICalcS
         return {};
     }
 
+    if (buttonName === 'del') {
+        if (state.next) {
+            return {
+                next: state.next.slice(1),
+            };
+        }
+        return {};
+    }
+
     if (/[0-9]+/.test(buttonName)) {
         if (buttonName === '0' && state.next === '0') {
             return {};
